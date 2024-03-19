@@ -5,7 +5,7 @@ Code Challenges: [Link](https://mica-wineberry-d80.notion.site/Code-Challenge-9f
 
 ## Prerequisite
 Please make sure you:
-- Have go at least version 1.20 installed
+- Have go at least version 1.20 installed (older version might also works)
 
 ## Commands
 To run test cases use this command
