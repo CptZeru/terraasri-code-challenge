@@ -1,12 +1,9 @@
 package challenges
 
 import (
+	"CptZeru/terraasri-code-challenge/utils"
 	"testing"
 )
-
-func throwErr(t *testing.T, expect interface{}, res interface{}) {
-	t.Errorf("Expected: %v, Result: %v", expect, res)
-}
 
 func TestIsPalindromeSuccess(t *testing.T) {
 	println("Is Palindrome Success Test Case")
@@ -15,7 +12,7 @@ func TestIsPalindromeSuccess(t *testing.T) {
 	expect := true
 
 	if res != expect {
-		throwErr(t, expect, res)
+		utils.ThrowTestingErr(t, expect, res)
 	}
 }
 
@@ -26,7 +23,7 @@ func TestIsNotPalindromeSuccess(t *testing.T) {
 	expect := false
 
 	if res != expect {
-		throwErr(t, expect, res)
+		utils.ThrowTestingErr(t, expect, res)
 	}
 }
 
@@ -37,7 +34,7 @@ func TestIsCircularPalindromeSuccessCases(t *testing.T) {
 	for _, str := range strs {
 		res := IsCircularPalindrome(str)
 		if res != expect {
-			throwErr(t, expect, res)
+			utils.ThrowTestingErr(t, expect, res)
 		}
 	}
 }
@@ -49,7 +46,7 @@ func TestIsNotCircularPalindromeSuccessCases(t *testing.T) {
 	for _, str := range strs {
 		res := IsCircularPalindrome(str)
 		if res != expect {
-			throwErr(t, expect, res)
+			utils.ThrowTestingErr(t, expect, res)
 		}
 	}
 }
