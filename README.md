@@ -8,6 +8,16 @@ Please make sure you:
 - Have go at least version 1.20 installed (older version might also works)
 
 ## Commands
+To build bin file
+```bash
+make build
+```
+
+To run program using bin file
+```bash
+make run
+```
+
 To run test cases use this command
 ```bash
 go test -v ./...
