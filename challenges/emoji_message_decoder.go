@@ -4,6 +4,7 @@ import (
 	"CptZeru/terraasri-code-challenge/constants"
 	"CptZeru/terraasri-code-challenge/repository"
 	"regexp"
+	"strings"
 )
 
 // DecodeMessage decode emoji contained string using emojiDecoder.
@@ -14,9 +15,22 @@ func DecodeMessage(message string) string {
 	})
 }
 
+// EncodeMessage encode plain string to emoji string.
+func EncodeMessage(message string) string {
+	words := strings.Fields(message)
+	for index, word := range words {
+		reversedEmojiDictionary := repository.GetReversedEmojiDictionary()
+		val, ok := reversedEmojiDictionary[word]
+		if ok {
+			words[index] = val
+		}
+	}
+	return strings.Join(words[:], " ")
+}
+
 // UpdateEmojiDictionary update emoji dictionary.
 func UpdateEmojiDictionary(emoji string, meaning string) string {
-	err := repository.UpdateEmojiDictionary(emoji, meaning)
+	err := repository.UpdateEmojiDictionaries(emoji, meaning)
 	if err != nil {
 		return "Unable to update dictionary"
 	}

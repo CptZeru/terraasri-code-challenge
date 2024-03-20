@@ -1,12 +1,14 @@
 {
-    "✈️": "airplane",
-    "🍔": "burger",
-    "🍟": "fries",
-    "🐉": "dragon",
-    "🐍": "snake",
-    "🗺": "map",
-    "😄": "happy",
-    "🛳": "cruise ship",
-    "🤔": "thinking",
-    "🥹": "sad"
+"✈️": "airplane",
+"🍔": "burger",
+"🍟": "fries",
+"🐉": "dragon",
+"🐊": "crocs",
+"🐍": "snake",
+"🐟": "fish",
+"🗺": "map",
+"😄": "happy",
+"🛳": "cruise ship",
+"🤔": "thinking",
+"🥹": "sad"
 }

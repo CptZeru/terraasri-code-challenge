@@ -19,6 +19,10 @@ func main() {
 			input = utils.ReadStringInput(reader, "Enter Encoded Message: ")
 			res := challenges.DecodeMessage(input)
 			fmt.Println(res)
+		case string(constants.CMDEncodeMessage):
+			input = utils.ReadStringInput(reader, "Enter Message to Encode: ")
+			res := challenges.EncodeMessage(input)
+			fmt.Println(res)
 		case string(constants.CMDAddEmojiDictionary):
 			input = utils.ReadStringInput(reader, "Enter Emoji to dictionary: ")
 			emoji := input
