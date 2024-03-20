@@ -54,7 +54,7 @@ func initIfReverseEmojiDictionaryDoesntExist() {
 func openAndReadFile(fileName string) map[string]string {
 	jsonFile, err := os.Open(fileName)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println(err.Error())
 	}
 	defer jsonFile.Close()
 	fmt.Printf("Successfully opened %v file\n", fileName)

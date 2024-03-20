@@ -15,15 +15,15 @@ func main() {
 	var input string
 	for input != "exit" {
 		switch input {
-		case string(constants.CMDDecodeEmojiMessage):
+		case string(constants.CMDDecodeEmojiMessage), string(constants.CMDSpecialDecodeEmojiMessage):
 			input = utils.ReadStringInput(reader, "Enter Encoded Message: ")
 			res := challenges.DecodeMessage(input)
 			fmt.Println(res)
-		case string(constants.CMDEncodeMessage):
+		case string(constants.CMDEncodeMessage), string(constants.CMDSpecialEncodeMessage):
 			input = utils.ReadStringInput(reader, "Enter Message to Encode: ")
 			res := challenges.EncodeMessage(input)
 			fmt.Println(res)
-		case string(constants.CMDAddEmojiDictionary):
+		case string(constants.CMDAddEmojiDictionary), string(constants.CMDSpecialAddEmojiDictionary):
 			input = utils.ReadStringInput(reader, "Enter Emoji to dictionary: ")
 			emoji := input
 			input = utils.ReadStringInput(reader, "Enter Emoji meaning: ")
@@ -38,7 +38,7 @@ func main() {
 			input = utils.ReadStringInput(reader, "Enter odd number for to sum diagonal spiral matrix: ")
 			intInput, err := strconv.Atoi(input)
 			if err != nil {
-				fmt.Print(err)
+				fmt.Println(err.Error())
 			}
 			res := challenges.CalculateSpiralDiagonalSum(intInput)
 			fmt.Printf("diagonal sum of %vx%v spiral matrix is %v\n", input, input, res)
